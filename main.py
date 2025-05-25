@@ -26,14 +26,24 @@ area = st.number_input(
     step=1
 )
 
+# Sample unit area input with range restriction and note
+st.markdown(
+    "**Standard sample unit area is 225 m² (2,500 ft²), but ASTM D6433-07 allows a range of 135 m² to 315 m² (225 ± 90 m²) to accommodate field conditions.**"
+)
+sample_unit_area = st.number_input(
+    "Enter sample unit area (m²):",
+    min_value=135,
+    max_value=315,
+    value=225,
+    step=1
+)
+
 if pavement_type == "Flexible (Asphalt Concrete)":
     s = 10
-    sample_unit_area = 225  # m²
-    st.info("Standard deviation (s) for Flexible Pavement: 10\nSample unit area: 225 m²")
+    st.info("Standard deviation (s) for Flexible Pavement: 10")
 else:
     s = 15
-    sample_unit_area = 225  # For simplicity, use 225 m² per sample unit (you can adjust for slabs if needed)
-    st.info("Standard deviation (s) for Rigid Pavement: 15\nSample unit area: 225 m² (adjust for slab size if known)")
+    st.info("Standard deviation (s) for Rigid Pavement: 15")
 
 e = 5  # Acceptable error in PCI points
 
