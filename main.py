@@ -58,7 +58,4 @@ st.header("About the Developer")
 st.write(f"**Name:** {NAME}")
 st.write(f"**Role:** {ROLE}")
 st.write(f"**Phone:** {PHONE}")
-st.markdown("Developed with ❤️ using [Streamlit](https://streamlit.io/)")
 
-# --- Optional: Add GitHub link ---
-st.markdown("GitHub: [Your Repository Link Here](https://github.com/yourusername/your-repo)")
